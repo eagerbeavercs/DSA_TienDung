@@ -1,0 +1,51 @@
+Bài 1: Khảo sát Insertion Sort
+- 1Kints: ~2ms.
+- 2Kints: ~5ms.
+- 4Kints: ~12ms.
+- 8Kints: ~20ms
+
+- 2KintsSameVal: 0ms.
+- 4KintsSameVal: 0ms.
+- 8KintsSameVal: ~1ms.
+
+- 2Kints_sorted: 0ms.
+- 2Kints_reversed: ~7ms.
+
+- 4Kints_sorted: 0ms.
+- 4Kints_reversed: ~11ms
+
+=> Insertion sort chạy với O(N^2) với mảng ngẫu nhiên.
+=> Tuyến tính O(N) với mảng được sắp xếp sẵn || có nhiều hay toàn
+giống nhau. Vì thấy nó thấy phần tử bên trái nhỏ hơn hoặc bằng thì 
+nó chuyển qua vòng lặp ngoài tiếp theo luôn.
+=> Worst-case là mảng sắp xếp ngược vì vòng lặp i nào cũng có ~i lần thao tác.
+
+Bài 2: Khảo sát Selection Sort
+- 1Kints: ~2ms.
+- 2Kints: ~6ms.
+- 4Kints: ~14ms.
+
+- 2KintsSameVal: ~7ms.
+- 4KintsSameVal: ~12ms.
+- 8KintsSameVal: ~24ms.
+
+- 2Kints_sorted: ~6ms.
+- 2Kints_reversed: ~6ms.
+
+- 4Kints_sorted: ~11ms.
+- 4Kints_reversed: ~11ms
+
+=> Selection Sort luôn chạy với Time Complexity O(N^2) 
+vì phải duyệt toàn bộ từ a[i] đến cuối mảng để tìm phần tử 
+thay thế dù có tồn tại hay không.
+=> Đã sắp xếp hay sắp xếp ngược hay ngẫu nhiên hoặc bằng nhau toàn bộ
+với cùng đầu vào N phần tử vẫn chạy với cùng thởi gian.
+
+Bài 8:
+- Insertion Sort: không nên lưu mảng đầu vào danh sách liên kết vì:
+    + Khi N cao -> số Node nhiều tốn bộ nhớ -> chậm
+    + chi phí duyệt, swap cao, phải duy trì nhiều trỏ phụ.
+    + cài đặt phức tạp hơn.
+    + khi cần truy cập tốn ~N để trỏ tới.
+
+- Selection Sort: cũng vậy. 
